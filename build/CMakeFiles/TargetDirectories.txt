@@ -1,0 +1,9 @@
+C:/Users/drozh/proga/Templates/build/CMakeFiles/Experimental.dir
+C:/Users/drozh/proga/Templates/build/CMakeFiles/Nightly.dir
+C:/Users/drozh/proga/Templates/build/CMakeFiles/Continuous.dir
+C:/Users/drozh/proga/Templates/build/CMakeFiles/NightlyMemoryCheck.dir
+C:/Users/drozh/proga/Templates/build/CMakeFiles/Templates.dir
+C:/Users/drozh/proga/Templates/build/CMakeFiles/PACKAGE.dir
+C:/Users/drozh/proga/Templates/build/CMakeFiles/RUN_TESTS.dir
+C:/Users/drozh/proga/Templates/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/drozh/proga/Templates/build/CMakeFiles/ZERO_CHECK.dir
