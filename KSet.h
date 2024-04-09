@@ -11,7 +11,7 @@ class Iter; // Forward declaration of Iter
 
 template <typename T>
 class KSet {
-    friend ostream& operator<< <>(ostream& os, const KSet<T>& kset);
+    
     friend class Iter<T>; // Use Iter<T> instead of Iter
 private:
     T *arr = new T[10]; // Use T instead of int
@@ -91,7 +91,7 @@ public:
 
     
     KSet<T>& operator&=(const KSet<T>& other) {
-        vector<int> temp;
+        vector<T> temp;
         for(int i = 0; i != this->size(); ++i) {
             for(int j = 0; j != other.size(); ++j) {
                 if(this->arr[i] == other.arr[j]) {
@@ -99,7 +99,7 @@ public:
                 }
             }
         }
-        this->sz = temp.size();
+        this->sz = temp.size() - 1;
         for (int i = 0; i != this->size(); ++i) {
             this->arr[i] = temp[i];
         }
@@ -129,7 +129,7 @@ public:
 
     
     KSet<T>& operator/=(const KSet<T>& other) {
-        vector<int> temp;
+        vector<T> temp;
         for(int i = 0; i != this->size(); ++i) {
             bool flag = false;
             for(int j = 0; j != other.size(); ++j) {
@@ -142,7 +142,7 @@ public:
                 temp.push_back(this->arr[i]);
             }
         }
-        this->sz = temp.size();
+        this->sz = temp.size() - 1;
         for(int i = 0; i != this->size(); ++i) {
             this->arr[i] = temp[i];
         }
@@ -168,16 +168,17 @@ public:
         return this->sz == 10;
     }
     
-    
+
+    int GetSZ() const {
+        return this->sz;
+    }
+    T* GetArr() const {
+        return this->arr;
+    }
 };
 
     
-    template <typename T>
-    ostream& operator<<(ostream& os, const KSet<T>& kset) {
-        for(int i = 0; i != kset.sz + 1; ++i) {
-            os << kset.arr[i] << "\t";
-        }
-        return os;
-    }
+    
+    
 
 #endif // KSET_H

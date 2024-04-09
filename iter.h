@@ -1,3 +1,7 @@
+#ifndef ITER_H
+#define ITER_H
+
+
 #include "KSet.h"
 
 
@@ -10,25 +14,27 @@ public:
     Iter(const KSet<T>* kset) {
         this->kset = kset;
     };
-    T* Iter<T>::first() {
+    T* first() {
         this->value = &kset->arr[0];
         index = 0;
         return this->value;
     }
 
-    T* Iter<T>::last() {
+    T* last() {
         if (this->kset->sz == -1) {
             return first();
         }
         this->value = &this->kset->arr[this->kset->sz];
         return this->value;
     }
-    T* Iter<T>::next() {
+    T* next() {
         this->index++;
         this->value = &this->kset->arr[this->index];
         return this->value;
     }
-    T* Iter<T>::CurrentItem() {
+    T* CurrentItem() {
         return this->value;
     }
 };
+
+#endif

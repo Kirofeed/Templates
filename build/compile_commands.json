@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/kirilldrozhzha/proga/Templates/build",
+  "command": "/usr/bin/clang++ -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -o CMakeFiles/Templates.dir/main.cpp.o -c /Users/kirilldrozhzha/proga/Templates/main.cpp",
+  "file": "/Users/kirilldrozhzha/proga/Templates/main.cpp",
+  "output": "CMakeFiles/Templates.dir/main.cpp.o"
+}
+]

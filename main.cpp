@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "KSet.h"
+#include "outfunk.cpp"
 #include "iter.h"
 using namespace std;
 
@@ -52,9 +53,12 @@ int main(){
     k3 = k1 / k2;
     cout << "k1 / k2: " << k3 << endl;
 
+    KSet<string> k5;
     KSet<string> k4;
     k4.push("hello");
     k4.push("world");
+    k5.push("hello");
+    k4 /= k5;
 
     cout << k4 << endl;
     
